@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title></title>
+
+        <style>
+        body {
+            margin: 70px 300px;
+            font-family: Andalus;
+            font-size:x-large;
+            font-weight:bold;
+			background-color:lightGrey;
+        }
+        [type=text],[type=button]
+        {
+            font-family:'Century Gothic';
+            font-size:large;
+        }
+
+        table {
+            width: 600px;
+        
+        }
+        span{ color:red;}
+        .SD {
+            background-color: lightpink;
+        }
+
+        .OS {
+            background-color: lightyellow;
+        }
+
+        .EL {
+            background-color: lightskyblue;
+        }
+        .hide
+        {
+            display: none;
+        }
+    </style>
+    </head>
+    <body>
+
+        <form style="margin: 2rem auto;width: 70%;">
+            <table>
+                <tr>
+                    <td colspan="2">
+                        Department:
+                        <input type="radio" name="Department" value="SD"
+                            checked="checked" />SD
+                        <input type="radio" name="Department" value="OS" />OS
+                        <input type="radio" name="Department" value="EL" />EL
+                    </td>
+                </tr>
+                <tr><td>StudentName<input type="text" name="studentName"
+                            value="Eman" /></td><td><span class="hide"
+                            id="nameError" style="font-size: 18px;">Required and can not repeat</span></td></tr>
+                <tr><td>StudentGrade<input type="text" name="studentGrade"
+                            value="50" /></td><td><span class="hide"
+                            id="gardeError">should be number</span>
+                        <span class="hide" id="checkGrade"style="font-size: 18px;"> the grade should be
+                            between 0 and
+                            100</span>
+                        <span class="hide" id="emptyGrade" style="font-size: 18px;">grade should not be
+                            empty</span>
+                    </td></tr>
+                <tr><td><input type="button" value="Add" /></td></tr>
+                <!-- <tr><td>Search<input type="text" name="searchTxt" /></td><td><span
+                            class="hide" id="gardeError">should be number</span>
+                    </td></tr> -->
+                <tr>
+                    <td colspan="2">
+                        sort:
+                        <select name="sortStudents">
+                            <option value="none">None</option>
+                            <option value="name">Name</option>
+                            <option value="grade">grade</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        Filter:
+                        <select name="filterStudents">
+                            <option value="all">All</option>
+                            <option value="success">Success</option>
+                            <option value="fail">Fail`</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <script src="students.js"></script>
+
+    </body>
+</html>
